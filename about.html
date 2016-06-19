@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Large Breakfast</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+  <script id="nav-partial" type="x-handlebars-template">
+  <nav id="navbar">
+  <div class="nav-wrapper">
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="">Who</a></li>
+  <img src="images\soundwave_logo.png">
+  <li><a href="music.html">Music</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  </ul>
+  </div>
+  </nav>
+  </script>
+
+  <script id="test-partial" type="x-handlebars-template">​
+  <p>test</p>
+  </script>
+
+  <script id="about-template" type="text/x-handlebars-template">
+    {{> nav }}
+    {{> test }}
+  </script>
+
+  <script>
+  var about = $('#about-template').html();
+  var template = Handlebars.compile(about);
+  Handlebars.registerPartial('nav', document.getElementById('nav-partial').innerHTML);
+  Handlebars.registerPartial('test', document.getElementById('test-partial').innerHTML);
+  $(document.body).append(template());
+  </script>
+</body>
+</html>
