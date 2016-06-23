@@ -10,35 +10,23 @@
   <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
-  <script id="nav-partial" type="x-handlebars-template">
   <nav id="navbar">
-  <div class="nav-wrapper">
-  <ul id="nav-mobile" class="right hide-on-med-and-down">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="">Who</a></li>
-  <img src="images\soundwave_logo.png">
-  <li><a href="music.html">Music</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  </ul>
-  </div>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Who</a></li>
+        <img src="images\soundwave_logo.png">
+        <li><a href="music.html">Music</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
-  </script>
 
-  <script id="test-partial" type="x-handlebars-template">​
-  <p>test</p>
-  </script>
-
-  <script id="about-template" type="text/x-handlebars-template">
-    {{> nav }}
-    {{> test }}
-  </script>
-
-  <script>
-  var about = $('#about-template').html();
-  var template = Handlebars.compile(about);
-  Handlebars.registerPartial('nav', document.getElementById('nav-partial').innerHTML);
-  Handlebars.registerPartial('test', document.getElementById('test-partial').innerHTML);
-  $(document.body).append(template());
-  </script>
+  <p class="text">
+    I compose, record, and produce music. I do voice overs.  I’m a sound designer.  Help me help you.  Do you have a film, cartoon, podcast, commercial, album, gentle heart, or even a dog with good taste in music? In need of some dulcet tones?  Let’s work together!
+  </p>
+  <p class="sub-text">
+    I began strumming a guitar at the tender age of 16 and haven’t put it down yet (even to go to the bathroom).  I find inspiration from a broad range of styles including classical, orchestral, chip tunes, rock, hip hop, construction work, and bangin’ on a trash can.
+  </p>
 </body>
 </html>
